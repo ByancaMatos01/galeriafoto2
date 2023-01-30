@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="libs/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="central">
+        <img src="imgs/chip_circuit_processor_140251_1280x720.jpg" id="foto-grande" alt="Imagem grande">
+        <h1 id="legenda">Aqui vai a legenda da foto que no momento eu não sei.</h1>
+        <div class="fp">
+            <img src="imgs/chip_circuit_processor_140251_1280x720.jpg" alt="" id="fotoTeste" title="Processador"
+                data-legenda="Aqui vai a legenda da foto que no momento eu não sei.">
+            <img src="imgs/code_technology_letters_129644_1280x720.jpg" alt=""
+                data-legenda="Escrever aqui o texto referente a terceira foto">
+            <img src="imgs/man_pier_lonely_mountains_silence_117817_1280x720.jpg" alt=""
+                data-legenda="O texto da legenda da segunda foto">
+        </div>
+    </div>
+
+    <script>
+
+        $('.fp img').click(function () {
+            $('#foto-grande').fadeOut();
+            var caminho = $(this).attr('src');
+            var legenda = $(this).attr('data-legenda');
+            $('#foto-grande').attr('src', caminho);
+            $('#legenda').html(legenda);
+            $('#foto-grande').fadeIn(300);
+        });
+
+    </script>
+</body>
+
+</html>

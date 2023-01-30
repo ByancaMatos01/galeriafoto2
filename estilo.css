@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fp img {
+  width: 300px;
+}
+
+#foto-grande {
+  height: 50vh;
+}
+
+.central {
+  width: 920px;
+  margin: 100px auto;
+  text-align: center;
+}
